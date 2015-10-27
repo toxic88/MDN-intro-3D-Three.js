@@ -49,7 +49,7 @@ function render() {
 	t += 0.01;
 	requestAnimationFrame(render);
 	cube.rotation.y += 0.01;
-	torus.scale.y = Math.sin(t);
+	torus.scale.y = Math.abs(Math.sin(t));
 	dodecahedron.position.y = -7*Math.sin(t*2);
 	renderer.render(scene, camera);
 }
